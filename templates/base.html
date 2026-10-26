@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arpit Turukmare{% endblock %} | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">&lt;AT /&gt;</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/" class="{% if active_page == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="/projects" class="{% if active_page == 'projects' %}active{% endif %}">Projects</a></li>
+                <li><a href="/skills" class="{% if active_page == 'skills' %}active{% endif %}">Skills</a></li>
+                <li><a href="/achievements" class="{% if active_page == 'achievements' %}active{% endif %}">Achievements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Built with <span class="heart">&#10084;</span> by Arpit Turukmare | DevOps CI/CD Pipeline Project &copy; 2026</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

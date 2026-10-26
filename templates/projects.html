@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>&#128640; My <span class="highlight">Projects</span></h1>
+    <p>Real-world applications built with modern technologies</p>
+</div>
+
+<div class="container">
+    <div class="cards-grid">
+        <!-- TechSentry -->
+        <div class="project-card">
+            <h3>&#128270; TechSentry</h3>
+            <div class="project-tech">
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">LLMs</span>
+                <span class="tech-tag">Patent APIs</span>
+            </div>
+            <ul>
+                <li>Built a full-stack technology intelligence platform (Django REST, React, SQLite) for research trend discovery and forecasting, designed for DRDO.</li>
+                <li>Developed AI pipelines using topic modeling, clustering, and Hugging Face LLMs to surface research hotspots and estimate Technology Readiness Levels (TRL).</li>
+                <li>Integrated OpenAlex, CrossRef, and patent metadata with semantic embeddings to power interactive visualizations, alerts, and personalized recommendations.</li>
+            </ul>
+        </div>
+
+        <!-- ScoreScope-AI -->
+        <div class="project-card">
+            <h3>&#128202; ScoreScope-AI</h3>
+            <div class="project-tech">
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">ML</span>
+                <span class="tech-tag">RandomForest</span>
+                <span class="tech-tag">GradientBoosting</span>
+            </div>
+            <ul>
+                <li>Built a Django-based student score analytics platform supporting both CSV upload and manual exam data entry.</li>
+                <li>Engineered ML-driven weak-topic detection and performance forecasting using RandomForest and GradientBoosting models.</li>
+                <li>Analyzed subject-wise trends and mistake patterns to generate actionable, personalized study insights for students.</li>
+            </ul>
+        </div>
+
+        <!-- YOLOv8 -->
+        <div class="project-card">
+            <h3>&#128247; Mobile Piracy Detection</h3>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">YOLOv8</span>
+                <span class="tech-tag">Computer Vision</span>
+            </div>
+            <ul>
+                <li>Developed a real-time piracy detection system using the YOLOv8 object detection model to identify unauthorized mobile phone recording in restricted environments.</li>
+                <li>Trained the model on custom datasets to accurately detect mobile devices, achieving high precision in varied lighting conditions.</li>
+            </ul>
+        </div>
+
+        <!-- This Portfolio -->
+        <div class="project-card">
+            <h3>&#9881;&#65039; Portfolio Website (This Site!)</h3>
+            <div class="project-tech">
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Jenkins</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">AWS EC2</span>
+            </div>
+            <ul>
+                <li>Built as a DevOps Lab practical project to demonstrate a full CI/CD pipeline.</li>
+                <li>Pipeline: GitHub &rarr; Jenkins &rarr; pytest &rarr; Docker &rarr; Kubernetes &rarr; AWS EC2</li>
+                <li>Includes automated testing, containerization, and orchestrated deployment.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
